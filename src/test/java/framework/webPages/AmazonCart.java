@@ -10,7 +10,7 @@ public class AmazonCart extends BasePage{
     By cartIcon = By.xpath("xpathForCart");
     By searchBar = By.xpath("searchBar");
     By searchIcon = By.xpath("searchIcon");
-    By productInCart = By.id("prodt");
+    By productInCart = By.id("djewdhw");
     String productName = "";
     By expectedProvider = By.xpath("//span[text()='" + productName + "']");
 
@@ -33,6 +33,7 @@ public class AmazonCart extends BasePage{
     }
 
     public void searchForItem(String text){
+        waitUntilElementVisible(searchBar);
     setValue(searchBar, text);
     clickOn(searchIcon);
     }
